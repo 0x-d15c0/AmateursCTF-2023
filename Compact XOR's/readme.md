@@ -4,8 +4,8 @@
 content in the given file fleg  <br>
 ###### fhex = '610c6115651072014317463d73127613732c73036102653a6217742b701c61086e1a651d742b69075f2f6c0d69075f2c690e681c5f673604650364023944' <br>
 ct = bytes.fromhex(fhex) returns b'a\x0ca\x15e\x10r\x01C\x17F=s\x12v\x13s,s\x03a\x02e:b\x17t+p\x1ca\x08n\x1ae\x1dt+i\x07_/l\ri\x07_,i\x0eh\x1c_g6\x04e\x03d\x029D'
-which are alternate characters of the flag . So after a bit of trial and error I figured out that all even bytes are exposed and all odd bytes are xored with 
-the next byte .
+In the starting when you notice you see that
+alternate characters of the flag are exposed at the sart. So after a bit of trial and error I figured out that the even bytes are exposed and odd bytes are xored with the next byte .
 Also we know that the flag format is `amateursCTF{`  
 
 ## solve script 
