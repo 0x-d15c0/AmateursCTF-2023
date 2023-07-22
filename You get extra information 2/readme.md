@@ -29,7 +29,7 @@ extra_information: 1824707117560643139812211860237178457887547279091531789220704
 ```
 ---------------------------------------------------------------------------------------------------
 ## solution 
-A simple equation was given as the extra information . Once you simplify that and add the constraint of n = pq , z3 will solve the equation fast and we'll get p and q.
+A simple equation was given as the extra information . `n**2*p**3 + 5*n**2*p**2 + 10*n**2*p + 5*n**2 + 5*n*q + q**2 == extra_information` <br> Once you simplify that constraint to the solver and add the constraint n = pq , z3 will solve the equation fast and we'll get p and q.
 Then its classic rsa decryption . 
 ## solve.py 
 ```py
