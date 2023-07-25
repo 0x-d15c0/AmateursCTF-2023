@@ -13,6 +13,7 @@ epsilon = beta/9
 XX = ceil(N**((beta**2/dd) - epsilon))
 rt = f.small_roots(XX, beta, epsilon)
 ```
+#### changed the beta value until we got the roots .  
 ## solve.py
 ```py
 from Crypto.Util.number import *
