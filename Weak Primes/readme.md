@@ -2,7 +2,20 @@
 ## chall
 `I know having p and q be too close together is insecure, but surely my innovative prime generation method is secure. I can't see why it isn't.`
 ## solution
-First we tried fermats due to the description figured it wouldnt be that easy , obviously no flag .  Tried multiple methods until we realised it was coppersmith's attack.
+First we tried fermats due to the description figured it wouldnt be that easy , obviously no flag . <br> Then we checked the output each time this block ran.
+```py
+def getModPrime(modulus):
+    p = 2**2047 + getPrime(128)
+    p += (modulus - p) % modulus
+    p += 1
+    iters = 0
+    while not isPrime(p):
+        p += modulus
+    return p
+```
+the output was different but the higher 1918 bits always remain the same . So we understood its coppersmiths attack when the higher bits are known .
+
+
 ## coppersmith.sage
 ```py
 P.<x> = PolynomialRing(Zmod(N))
